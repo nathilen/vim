@@ -1,4 +1,5 @@
 colorscheme vividchalk
+set shell=/bin/sh
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -17,6 +18,7 @@ set showmatch
 set dictionary=/usr/share/dict/words
 set hlsearch
 
+
 syntax on
 filetype on
 filetype indent on
@@ -28,6 +30,7 @@ nnoremap <F5> :GundoToggle<CR>
 
 imap ;so System.out.println(); <left><left>
 imap ;ne <esc>/;<cr>a
+imap <S-CR> <CR><CR>end<Esc>-cc
 
 map <C-l> :tabn<CR>
 map <C-h> :tabp<CR>
@@ -35,3 +38,13 @@ map <C-n> :tabnew<CR>
 map <F2>  :NERDTree<CR>
 
 execute pathogen#infect()
+
+autocmd BufEnter * Rvm
+
+autocmd FileType ruby compiler ruby
+if has("autocmd") && exists("+omnifunc")
+    autocmd Filetype *
+                    \   if &omnifunc == "" |
+                    \           setlocal omnifunc=syntaxcomplete#Complete |
+                    \   endif
+endif

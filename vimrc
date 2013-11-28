@@ -75,7 +75,6 @@ execute pathogen#infect()
 
 """""""""""""""""Ruby""""""""""'"""""""""""""""""""""""
 autocmd FileType ruby compiler ruby
-autocmd BufEnter * Rvm
 
 """""""""""""""javascript plugin"""""""""""""""""""""""""""""""""
 "au FileType javascript call JavaScriptFold()

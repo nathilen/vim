@@ -13,7 +13,7 @@ set ai
 
 set showcmd     "show incomplete command
 set ruler
-set paste
+set nopaste
 set showmatch
 set dictionary=/usr/share/dict/words
 set hlsearch    "highlight matches
@@ -28,7 +28,7 @@ filetype indent plugin on "load filetype plugins and indentation
 let g:NERDTreeDirArrows=0
 
 "F2 start NERDTree
-map <F2>  :NERDTree<CR>
+map <F2>  :NERDTreeToggle<CR>
 
 """""""GENERAL"""""""""""""""""""""""""""""""""""
 let mapleager = ","

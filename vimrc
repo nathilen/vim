@@ -60,7 +60,7 @@ nmap <silent> <Leader>sv :so ~/.vimrc<CR>
 
 "this trick will help when you edit a file you were supposed to sudo to. no
 "need to reopen the file
-cmap w!! w !sudo tee % > /dev/null
+cmap w!! w !sudo tee > /dev/null %
 
 """"""Gundo"""""""""""""""""""""""""""""""""""
 nnoremap <F5> :GundoToggle<CR>

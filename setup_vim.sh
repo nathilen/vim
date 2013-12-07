@@ -1,4 +1,9 @@
-#!/bin/sh
+if [[ "$(uname -a)" == *Linux* ]]
+then
+  echo `#!/bin/bash`;
+else
+  echo `#!/bin/sh`;
+fi
 
 VIM_DIR="${HOME}/.vim"
 CURRENT_DIR=`pwd`
@@ -12,6 +17,7 @@ do
   ln -s "${CURRENT_DIR}/${dir}" "${VIM_DIR}/${dir}"
 done
 
+echo "Creating link for file .vimrc file"
 ln -s "${CURRENT_DIR}/vimrc" "${HOME}/.vimrc"
 
 

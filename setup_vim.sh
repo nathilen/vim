@@ -9,6 +9,7 @@ VIM_DIR="${HOME}/.vim"
 CURRENT_DIR=`pwd`
 declare -a VIM_SUB_DIRS=('autoload' 'bundle' 'colors' 'doc' 'plugin');
 
+rm -rf $VIM_DIR
 mkdir -p $VIM_DIR
 
 for dir in "${VIM_SUB_DIRS[@]}"

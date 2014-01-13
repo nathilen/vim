@@ -19,6 +19,7 @@ do
 done
 
 echo "Creating link for file .vimrc file"
+rm -rf "${HOME}/.vimrc"
 ln -s "${CURRENT_DIR}/vimrc" "${HOME}/.vimrc"
 
 

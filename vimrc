@@ -48,6 +48,9 @@ nmap <Leader>q :qa!<cr>
 "alternate between files
 nnoremap <Leader><Leader> <c-^>   
 
+"substitute all occurrences of the word under the cursor
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+
 "navigate through windows with Ctrl + key
 map <C-l> <C-w>l
 map <C-h> <C-w>h

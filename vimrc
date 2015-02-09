@@ -41,8 +41,15 @@ map <F2>  :NERDTreeToggle<CR>
 let mapleager = ","
 let g:mapleader = ","
 
+""""" Normal mode shortcuts"""""""""""""""""""""
+
+"press K to split current line starting at point of cursor
 nmap K i<cr><esc>k$
+
+"press to save current file
 nmap z :w <enter>
+
+"press ,q to quit all opened files without saving
 nmap <Leader>q :qa!<cr>
 
 "alternate between files
@@ -65,18 +72,22 @@ nmap <silent> <Leader>sv :so ~/.vimrc<CR>
 "need to reopen the file
 cmap w!! w !sudo tee > /dev/null %
 
-""""""Gundo"""""""""""""""""""""""""""""""""""
+
+""""""GUNDO"""""""""""""""""""""""""""""""""""
 nnoremap <F5> :GundoToggle<CR>
 
-""""""""""Java specific"""""""""""""""""""""""""""
+
+""""""""""JAVA SPECIFIC"""""""""""""""""""""""""""
 imap ;so System.out.println(); <left><left>
 imap ;ne <esc>/;<cr>a
 imap <S-CR> <CR><CR>end<Esc>-cc
 
+
 """"""""""auto load new plugins using pathogen"""""""""""""""
 execute pathogen#infect()
 
-"""""""""""""""""Ruby""""""""""'"""""""""""""""""""""""
+
+"""""""""""""""""RUBY""""""""""'"""""""""""""""""""""""
 autocmd FileType ruby compiler ruby
 
 """""""""""""""javascript plugin"""""""""""""""""""""""""""""""""

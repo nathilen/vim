@@ -17,7 +17,7 @@ set ai
 
 set showcmd     "show incomplete command
 set ruler
-set nopaste
+"set nopaste
 set showmatch   "show matching parathensis
 set hlsearch    "highlight matches
 set incsearch   "show search match as I type
